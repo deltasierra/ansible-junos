@@ -38,8 +38,8 @@ Thumbs.db
 
 # Junos config files           #
 #   and anything named private #
-#   and tmp/ directories       #
+#   and the build/ folder      #
 ################################
 junos.conf
 *-private*
-*/tmp/
+build/
