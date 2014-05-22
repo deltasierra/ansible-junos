@@ -8,3 +8,5 @@ sprite		ansible_ssh_host=192.168.100.25
 
 godzilla	ansible_ssh_host=192.168.100.41
 mothra		ansible_ssh_host=192.168.100.42
+
+fw1-private
