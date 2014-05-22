@@ -22,30 +22,19 @@
 # Role based config template building
 # =========================================================
 
-- name: Build base system for Junos devices
+- name: Build system basics for all Junos devices
   hosts: junos
   connection: local
   gather_facts: no
   roles:
     - base_system
 
-#- name: Template-build PCI Firewalls
-#  hosts: fw_role_PCI
-#  connection: local
-#  gather_facts: no
-#  roles:
-#    - ansible_user
-#    - fw_baseconf
-#    - fw_pciconf
-
-#- name: Template-build DMZ Firewalls
-#  hosts: fw_role_DMZ
-#  connection: local
-#  gather_facts: no
-#  roles:
-#    - ansible_user
-#    - fw_baseconf
-#    - fw_dmzconf
+- name: Build basic security for Junos firewalls
+  hosts: fw_all
+  connection: local
+  gather_facts: no
+  roles:
+    - basic_firewall
 
 # =========================================================
 # Finish by assembling config snippets into single file

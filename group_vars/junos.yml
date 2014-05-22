@@ -18,6 +18,12 @@ radius:
 auth_order:
     "[ radius password ]"
 
+users:
+    - name: remote-admin
+      full_name: '"Template for full-admin RADIUS users"'
+      uid: 9001
+      class: super-user
+
 local_services:
     - ssh
     - netconf_ssh
@@ -43,3 +49,8 @@ syslog:
               - "any info"
     file_size: 1m
     num_files: 10
+
+mgt_net:
+    prefix: 192.168.0.0/16
+    nh: 192.168.100.1
+

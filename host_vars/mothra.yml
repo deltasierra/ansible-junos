@@ -1,17 +1,17 @@
 ---
 my_host_name:
-    coke
+    mothra
 
 my_domain_name:
     lab
 
 management:
     ifd: ge-0/0/0
-    ip: 192.168.100.21
+    ip: 192.168.100.42
     subnet_bits: 24
 
 local_timezone:
     America/New_York
 
 syslog_prefix:
-    COKE
+    MOTHRA

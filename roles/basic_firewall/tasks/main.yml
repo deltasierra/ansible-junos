@@ -1,0 +1,1 @@
+---- name: building basic firewall config  template: src=basic_security_cfg.yml dest={{ build_dir }}/10_basic_security.conf

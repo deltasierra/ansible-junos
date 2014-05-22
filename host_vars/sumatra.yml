@@ -5,8 +5,10 @@ my_host_name:
 my_domain_name:
     lab
 
-mgt_ip:
-    192.168.100.18
+management:
+    ifd: vlan
+    ip: 192.168.100.18
+    subnet_bits: 24
 
 local_timezone:
     America/New_York
