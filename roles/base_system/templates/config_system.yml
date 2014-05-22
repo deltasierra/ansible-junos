@@ -68,6 +68,13 @@ groups {
                 source-address {{ management.ip }};
             }
         }
+        snmp {
+{% for community in snmp.communities %}
+            community {{ community.name }} {
+                authorization {{ community.auth }};
+            }
+{% endfor %}
+        }
         interfaces {
             {{ management.ifd }} {
                 unit 0 {

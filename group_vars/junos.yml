@@ -50,6 +50,11 @@ syslog:
     file_size: 1m
     num_files: 10
 
+snmp:
+    communities:
+        - name: greg-net
+          auth: read-only
+
 mgt_net:
     prefix: 192.168.0.0/16
     nh: 192.168.100.1

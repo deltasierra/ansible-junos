@@ -14,4 +14,4 @@ local_timezone:
     America/New_York
 
 syslog_prefix:
-    godzilla
+    GODZILLA
