@@ -1,0 +1,39 @@
+---
+my_host_name:
+    qf1
+
+my_domain_name:
+    lab
+
+local_timezone:
+    America/New_York
+
+syslog_prefix:
+    QF1
+
+node_group:
+    - name: NONE
+      devices:
+        - sn: 1c1c1c1c
+          alias: IC-0
+        - sn: 2c2c2c2c
+          alias: IC-1
+    - name: NW-NG-0
+      devices:
+        - sn: 99999990
+          alias: NODE-9A
+        - sn: 99999991
+          alias: NODE-9B
+    - name: NODE-1
+      devices:
+        - sn: 11111111
+          alias: NODE-1A
+    - name: NODE-2
+      devices:
+        - sn: 22222222
+          alias: NODE-2A
+        - sn: 22222223
+          alias: NODE-2B
+          
+      
+      

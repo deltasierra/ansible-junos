@@ -1,0 +1,6 @@
+---
+- name: building Qfabric system{} config
+  template: src=config_system.yml dest={{ build_dir }}/00_qfabric.conf
+  
+- name: building Qfabric fabric{} config
+  template: src=config_qfabric.yml dest={{ build_dir }}/05_qfabric.conf

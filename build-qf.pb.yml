@@ -22,19 +22,12 @@
 # Role based config template building
 # =========================================================
 
-- name: Build system basics for all Junos devices
-  hosts: junos
+- name: Build fabric inventory for QFabric
+  hosts: qfabric
   connection: local
   gather_facts: no
   roles:
-    - base_system
-
-- name: Build basic security for Junos firewalls
-  hosts: fw_all
-  connection: local
-  gather_facts: no
-  roles:
-    - basic_firewall
+    - qfabric
 
 # =========================================================
 # Finish by assembling config snippets into single file

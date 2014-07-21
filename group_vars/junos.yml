@@ -16,8 +16,22 @@ radius:
       secret_encrypted: "$9$sDYJGTQ36/tgon9puhcKM87VskqfFnCz3"
 
 auth_order:
-    "[ radius password ]"
+    radius
+    password
 
+login_class:
+    - name: Administrator
+      idle: 10
+      perm:
+          view
+          network
+          system
+    - name: RO
+      idle: 5
+      perm:
+          view
+          network
+        
 users:
     - name: remote-admin
       full_name: '"Template for full-admin RADIUS users"'
