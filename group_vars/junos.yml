@@ -51,6 +51,10 @@ syslog:
     num_files: 10
 
 snmp:
+    client_lists:
+        - name: GREG-NET
+          clients:
+            - 192.168.168.102/32
     communities:
         - name: greg-net
           auth: read-only

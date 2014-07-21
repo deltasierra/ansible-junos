@@ -1,0 +1,19 @@
+routing-instances {
+{% for instance in vpls.instance %}
+    {{ instance.name }} {
+        instance-type vpls;
+        interface {{ instance.ce_ifl }};
+        route-distinguisher {{ management.ip }}:{{ instance.id_num }};
+        vrf-target target:{{ asn }}:{{ instance.id_num }};
+        protocols {
+            vpls {
+                no-tunnel-services;
+                site {{ instance.site_name }} {
+                    site-identifier {{ instance.site_id }};
+                    interface {{ instance.ce_ifl }};
+                }
+            }
+        }
+    }
+{% endfor %}
+}

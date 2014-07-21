@@ -1,0 +1,1 @@
+---- name: building VPLS instances  template: src=vpls_instance.yml dest={{ build_dir }}/50_vpls_instance.conf

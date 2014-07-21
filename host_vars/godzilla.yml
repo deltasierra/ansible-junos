@@ -5,11 +5,6 @@ my_host_name:
 my_domain_name:
     lab
 
-management:
-    ifd: ge-0/0/0
-    ip: 192.168.100.41
-    subnet_bits: 24
-
 local_timezone:
     America/New_York
 
@@ -18,3 +13,19 @@ syslog_prefix:
 
 packet_based:
     True
+
+management:
+    ifd: ge-0/0/0
+    ip: 192.168.100.41
+    subnet_bits: 24
+
+asn:
+    65255
+
+vpls:
+    instance:
+        - name: FIREFLY
+          id_num: 100
+          ce_ifl: ge-0/0/1.41
+          site_name: GODZILLA
+          site_id: 1

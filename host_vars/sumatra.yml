@@ -6,7 +6,7 @@ my_domain_name:
     lab
 
 management:
-    ifd: vlan
+    ifd: em0
     ip: 192.168.100.18
     subnet_bits: 24
 

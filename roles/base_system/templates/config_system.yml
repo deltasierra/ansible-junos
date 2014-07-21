@@ -69,6 +69,13 @@ groups {
             }
         }
         snmp {
+{% for list in snmp.client_lists %}
+            client-list {{ list.name }} {
+{% for client in list.clients %}
+                {{ client }};
+{% endfor %}
+            }
+{% endfor %}
 {% for community in snmp.communities %}
             community {{ community.name }} {
                 authorization {{ community.auth }};
@@ -87,6 +94,17 @@ groups {
         routing-options {
             static {
                 route {{ mgt_net.prefix }} next-hop {{ mgt_net.nh }};
+            }
+        }
+        policy-options {
+            prefix-list MGT-NETS {
+                {{ mgt_net.prefix }};
+            }
+            prefix-list SNMP-SERVERS {
+                apply-path "snmp client-list <*> <*>";
+            }
+            prefix-list BGP-PEERS {
+                apply-path "protocols bgp group <*> neighbor <*>";
             }
         }
     }

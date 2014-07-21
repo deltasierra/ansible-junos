@@ -1,20 +1,20 @@
 ---
 my_host_name:
-    mrpibb
+    ghidorah
 
 my_domain_name:
     lab
 
 management:
     ifd: ge-0/0/0
-    ip: 192.168.100.24
+    ip: 192.168.100.43
     subnet_bits: 24
 
 local_timezone:
     America/New_York
 
 syslog_prefix:
-    MRPIBB
+    GHIDORAH
 
 packet_based:
-    False
+    True

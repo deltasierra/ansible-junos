@@ -1,2 +1,6 @@
 [vsrx]
 godzilla	ansible_ssh_host=192.168.100.41
+mothra		ansible_ssh_host=192.168.100.42
+ghidorah	ansible_ssh_host=192.168.100.43
+gamera		ansible_ssh_host=192.168.100.44
+rodan		ansible_ssh_host=192.168.100.45
