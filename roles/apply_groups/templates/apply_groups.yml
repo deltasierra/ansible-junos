@@ -1,0 +1,5 @@
+{% if platform == 'srx' %}
+apply-groups [ SYSTEM_BASICS SECURITY_BASICS ];
+{% else %}
+apply-groups [ SYSTEM_BASICS ];
+{%endif %}

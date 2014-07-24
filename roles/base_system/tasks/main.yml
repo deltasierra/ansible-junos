@@ -1,3 +1,3 @@
 ---
 - name: building junos basic system config
-  template: src=config_system.yml dest={{ build_dir }}/00_basic_system.conf
+  template: src=config_system2.yml dest={{ build_dir }}/00_basic_system.conf

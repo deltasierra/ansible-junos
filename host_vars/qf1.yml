@@ -1,4 +1,6 @@
 ---
+platform: qfabric
+
 my_host_name:
     qf1
 

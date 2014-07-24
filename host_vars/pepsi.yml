@@ -1,4 +1,6 @@
 ---
+platform: srx
+
 my_host_name:
     pepsi
 

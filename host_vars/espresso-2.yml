@@ -1,4 +1,6 @@
 ---
+platform: ex-fixed
+
 my_host_name:
     espresso-2
 

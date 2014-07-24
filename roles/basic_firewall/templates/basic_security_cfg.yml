@@ -46,4 +46,3 @@ groups {
         }
     }
 }
-apply-groups [ SYSTEM_BASICS SECURITY_BASICS ];

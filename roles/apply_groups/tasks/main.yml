@@ -1,0 +1,3 @@
+---
+- name: writing apply-groups to Junos config
+  template: src=apply_groups.yml dest={{ build_dir }}/05_apply_groups.conf
