@@ -1,0 +1,21 @@
+interfaces {
+    /* Build Interfaces for QFabric Systmes */
+{% for range in inter_ranges %}
+    interface-range {{ range.name }} {
+{% set items = range.members %}
+{% for i in items %}
+        member-range {{ i.start_int }} to {{ i.end_int }};
+{% endfor %}
+        unit 0 {
+            family ethernet-switching {
+                vlan {
+                    members [ {{ range.vlan }} ];
+{% if range.tagged == 'TRUE' %}
+                }
+                native-vlan-id {{ native_vlan }};
+{% endif %}
+{% endfor %}
+            }
+        }
+    }
+}

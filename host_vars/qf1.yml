@@ -36,6 +36,48 @@ node_group:
           alias: NODE-2A
         - sn: 22222223
           alias: NODE-2B
-          
-      
+
+inter_ranges:
+#    - name: TV3-Interfaces
+#      start_int: TV3-A:xe-0/0/0
+#      end_int: TV3-A:xe-0/0/47
+#      vlan: 
+#          24-PIQ
+#      tagged: FALSE
+
+#    - name: CV1-Interfaces
+#      start_int: CV1-A:xe-0/0/0
+#      end_int: TV3-A:xe-0/0/47
+#      vlan: 
+#          Hadoop
+#      tagged: TRUE
+
+    - name: CV2-Interfaces
+      members:
+        - { start_int: 'CV2-A:xe-0/0/0', end_int: 'CV2-A:xe-0/0/47' }
+        - { start_int: 'CV2-B:xe-0/0/0', end_int: 'CV2-B:xe-0/0/47' }
+      vlan: 24-PIQ
+      tagged: TRUE
+      vlan:
+        24-PIQ
+        Hadoop
+
+vlans:
+     - name: 24-PIQ
+       vlan_id: 24
+       description: "Native VLAN for SAN-A"
+       l3_intr: TRUE
+     - name: Hadoop 
+       vlan_id: 10
+       description: "Hadoop Front End"
+       l3_intr: FALSE
+
+link_agg:
+     - description: "Parse from LLDP"
+       nodes:
+        - alias: DCM1-A
+        - alias: DCM2-A
+        - port: xe-0/0/2 
+
+native_vlan: 2 
       
